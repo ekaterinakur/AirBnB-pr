@@ -1,0 +1,277 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+  color: #3d4e61;
+
+  p,
+  h1,
+  h3 {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #3d4e61;
+  }
+
+  li {
+    list-style: none;
+    font-weight: bold;
+  }
+
+  header {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+
+    .header-logo {
+      background: url(../images/logo.svg) no-repeat;
+      width: 30px;
+      height: 30px;
+
+      a {
+        padding: 15px;
+      }
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .header-ul {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        margin-right: 30px;
+
+        li:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+
+      .header-profile {
+        background: url(../images/profile-photo.svg) no-repeat;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        a {
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  main {
+
+    .main-photo {
+      max-height: 464px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .main-wrapper {
+      max-width: 900px;
+      margin: 40px auto 75px;
+      padding: 0 25px;
+      display: flex;
+      justify-content: space-between;
+
+      .about-apartment {
+        max-width: 492px;
+        margin-right: 20px;
+
+        .main-info {
+
+          h1 {
+            font-size: 36px;
+            font-family: "Avenir", sans-serif;
+          }
+
+          .entire-apartment {
+            color: #687c94;
+            margin: 10px 0 15px;
+          }
+
+          span:not(:last-child) {
+            margin-right: 15px;
+          }
+
+          p {
+            margin-top: 30px;
+          }
+
+          .contact-host {
+            font-weight: bold;
+            display: inline-block;
+            margin: 30px 0 45px;
+          }
+
+          .amenities {
+
+            span {
+              font-size: 20px;
+              font-weight: bold;
+            }
+
+            .amenities-list {
+              margin: 20px 0;
+              display: grid;
+              grid: auto-flow / repeat(2, 175px);
+              grid-gap: 20px 15px;
+            }
+
+            .show-amenities {
+              font-weight: bold;
+              border: none;
+              background: none;
+              padding: 0;
+              font-family: "Avenir", sans-serif;
+              font-size: 16px;
+              color: #3d4e61;
+              outline: none;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .reviews {
+          margin: 65px 0;
+
+          .review {
+            margin-top: 34px;
+
+            .review-from {
+              margin-bottom: 14px;
+
+              .review-profile {
+                background: #c4c4c4;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 20px;
+                float: left;
+
+                .review-profile-link {
+                  padding: 25px;
+                }
+              }
+
+              .review-author {
+                font-size: 20px;
+                margin-bottom: 4px;
+              }
+
+              .reviewe-date {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .hosted-info {
+
+          .hosted-place {
+            font-size: 14px;
+            margin: 10px 0 15px;
+          }
+
+          .contact-host {
+            padding: 15px 25px;
+            border: 1px solid #118488;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #118488;
+            display: inline-block;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      .registration-form {
+        width: 330px;
+        height: 320px;
+        box-sizing: border-box;
+        border: 1px solid #e1e7ed;
+        border-radius: 3px;
+        padding: 30px 30px 0;
+
+        form {
+          margin-top: 40px;
+
+          input {
+            width: 270px;
+            height: 50px;
+            border: 1px solid #e1e7ed;
+            border-radius: 3px;
+            margin-bottom: 16px;
+            padding: 14px 17px;
+            box-sizing: border-box;
+            font-family: "Avenir", sans-serif;
+            font-size: 16px;
+            outline: none;
+          }
+
+          input[type="submit"] {
+            margin-top: 8px;
+            background: #fd5c63;
+            border-radius: 4px;
+            color: #fff;
+          }
+        }
+      }
+
+      @media (max-width: 784px) {
+        display: block;
+
+        .about-apartment {
+          margin: 0 auto;
+        }
+
+        .registration-form {
+          margin: 40px auto 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 45px 25px;
+    box-shadow: 0 -1px 0 #e1e7ed;
+
+    .footer-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+
+        .links-themes {
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+
+        a:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

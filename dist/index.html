@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,
+          user-scalable=no,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          minimum-scale=1.0">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>AirBnB</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <header>
+    <div class="header-logo"><a href="#"></a></div>
+    <nav class="header-nav">
+      <ul class="header-ul">
+        <li><a href="#">Become a host</a></li>
+        <li><a href="#">Trips</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <div class="header-profile"><a href="#"></a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="main-photo">
+      <img src="images/main-photo.png" alt="appartment">
+    </section>
+
+    <div class="main-wrapper">
+      <article class="about-apartment">
+        <section class="main-info">
+          <h1>Quiet apartment</h1>
+          <div class="entire-apartment">Entire apartment</div>
+          <span class="guests">4 guests</span>
+          <span class="bed">1 bed</span>
+          <span class="bath">1 bath</span>
+          <p class="about-apartment">City Apartment is newly renovated in the heart of Budapest, right in the city center. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam.</p>
+          <a href="#" class="contact-host">Contact host</a>
+          <section class="amenities">
+            <span>Amenities</span>
+            <div class="amenities-list">
+              <div>Elevator</div>
+              <div>Washer</div>
+              <div>Hair dryer</div>
+              <div>Kitchen</div>
+            </div>
+            <button class="show-amenities">Show All Amenities</button>
+          </section>
+        </section>
+
+        <section class="reviews">
+          <h3>Reviews</h3>
+          <article class="review">
+            <div class="review-from">
+              <div class="review-profile"><a href="#" class="review-profile-link"></a></div>
+              <div class="review-author">John</div>
+              <div class="reviewe-date">September 2016</div>
+            </div>
+            <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </article>
+
+          <article class="review">
+            <div class="review-from">
+              <div class="review-profile"><a href="#"></a></div>
+              <div class="review-author">John</div>
+              <div class="reviewe-date">September 2016</div>
+            </div>
+            <p class="review-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.</p>
+          </article>
+        </section>
+
+        <section class="hosted-info">
+          <h3>Hosted by Jane</h3>
+          <div class="hosted-place">Budapest, Hungary</div>
+          <p class="hosted-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et magna aliqua.</p>
+          <a href="#" class="contact-host">Contact Host</a>
+        </section>
+      </article>
+
+      <section class="registration-form">
+        <div class="price"><span class="price">25</span>$ per night</div>
+        <form action="">
+          <input type="text" id="datepicker" name="date" placeholder="Date">
+          <input type="number" name="guests" placeholder="Guests">
+          <input type="submit" value="Book">
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-links about">
+        <span class="links-themes">Airbnb</span>
+        <a href="#">About</a>
+        <a href="#">Press</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="footer-links discover">
+        <span class="links-themes">Discover</span>
+        <a href="#">Travel credit</a>
+        <a href="#">Business</a>
+        <a href="#">Guidebooks</a>
+      </div>
+      <div class="footer-links hosting">
+        <span class="links-themes">Hosting</span>
+        <a href="#">Why host</a>
+        <a href="#">Hospitality</a>
+        <a href="#">Community</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+  </script>
+</body>
+</html>
