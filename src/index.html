@@ -15,15 +15,19 @@
 </head>
 <body>
   <header>
-    <div class="header-logo"><a href="#"></a></div>
-    <nav class="header-nav">
-      <ul class="header-ul">
-        <li><a href="#">Become a host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messages</a></li>
-      </ul>
-      <div class="header-profile"><a href="#"></a></div>
-    </nav>
+    <section class="header-wrapper">
+      <div class="header-logo"><a href="#"></a></div>
+      <div class="header-right">
+        <nav class="header-nav">
+          <ul class="header-ul">
+            <li><a href="#">Become a host</a></li>
+            <li><a href="#">Trips</a></li>
+            <li><a href="#">Messages</a></li>
+          </ul>
+        </nav>
+        <div class="header-profile"><a href="#"></a></div>
+      </div>
+    </section>
   </header>
 
   <main>
@@ -60,8 +64,10 @@
           <article class="review">
             <div class="review-from">
               <div class="review-profile"><a href="#" class="review-profile-link"></a></div>
-              <div class="review-author">John</div>
-              <div class="reviewe-date">September 2016</div>
+              <div class="review-from-wrap">
+                <div class="review-author">John</div>
+                <div class="reviewe-date">September 2016</div>
+              </div>
             </div>
             <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -69,9 +75,11 @@
 
           <article class="review">
             <div class="review-from">
-              <div class="review-profile"><a href="#"></a></div>
-              <div class="review-author">John</div>
-              <div class="reviewe-date">September 2016</div>
+              <div class="review-profile"><a href="#" class="review-profile-link"></a></div>
+              <div class="review-from-wrap">
+                <div class="review-author">John</div>
+                <div class="reviewe-date">September 2016</div>
+              </div>
             </div>
             <p class="review-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam.</p>
@@ -87,14 +95,14 @@
         </section>
       </article>
 
-      <section class="registration-form">
+      <aside class="registration-form">
         <div class="price"><span class="price">25</span>$ per night</div>
         <form action="">
           <input type="text" id="datepicker" name="date" placeholder="Date">
-          <input type="number" name="guests" placeholder="Guests">
+          <input type="number" name="guests" min="1" placeholder="Guests">
           <input type="submit" value="Book">
         </form>
-      </section>
+      </aside>
     </div>
   </main>
 

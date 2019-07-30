@@ -22,6 +22,10 @@ body {
   a {
     text-decoration: none;
     color: #3d4e61;
+
+    &:hover {
+      color: #000;
+    }
   }
 
   li {
@@ -31,43 +35,51 @@ body {
 
   header {
     padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
 
-    .header-logo {
-      background: url(../images/logo.svg) no-repeat;
-      width: 30px;
-      height: 30px;
-
-      a {
-        padding: 15px;
-      }
-    }
-
-    .header-nav {
+    .header-wrapper {
+      max-width: 1950px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      align-items: center;
 
-      .header-ul {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        margin-right: 30px;
-
-        li:not(:last-child) {
-          margin-right: 30px;
-        }
-      }
-
-      .header-profile {
-        background: url(../images/profile-photo.svg) no-repeat;
+      .header-logo {
+        background: url(../images/logo.svg) no-repeat;
         width: 30px;
         height: 30px;
-        border-radius: 50%;
 
         a {
           padding: 15px;
+        }
+      }
+
+      .header-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-nav {
+          margin-right: 30px;
+
+          .header-ul {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+
+            li:not(:last-child) {
+              margin-right: 30px;
+            }
+          }
+        }
+
+        .header-profile {
+          background: url(../images/profile-photo.svg) no-repeat;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+
+          a {
+            padding: 15px;
+          }
         }
       }
     }
@@ -77,6 +89,8 @@ body {
 
     .main-photo {
       max-height: 464px;
+      text-align: center;
+      overflow: hidden;
 
       img {
         width: 100%;
@@ -144,6 +158,10 @@ body {
               color: #3d4e61;
               outline: none;
               cursor: pointer;
+
+              &:hover {
+                color: #000;
+              }
             }
           }
         }
@@ -156,6 +174,7 @@ body {
 
             .review-from {
               margin-bottom: 14px;
+              display: flex;
 
               .review-profile {
                 background: #c4c4c4;
@@ -163,10 +182,10 @@ body {
                 height: 50px;
                 border-radius: 50%;
                 margin-right: 20px;
-                float: left;
 
                 .review-profile-link {
                   padding: 25px;
+                  font-size: 0;
                 }
               }
 
@@ -197,6 +216,11 @@ body {
             color: #118488;
             display: inline-block;
             margin-top: 20px;
+
+            &:hover {
+              color: #fff;
+              background: #118488;
+            }
           }
         }
       }
@@ -208,6 +232,8 @@ body {
         border: 1px solid #e1e7ed;
         border-radius: 3px;
         padding: 30px 30px 0;
+        position: sticky;
+        top: 20px;
 
         form {
           margin-top: 40px;
@@ -230,6 +256,11 @@ body {
             background: #fd5c63;
             border-radius: 4px;
             color: #fff;
+            cursor: pointer;
+
+            &:hover {
+              font-weight: bold;
+            }
           }
         }
       }
@@ -243,6 +274,7 @@ body {
 
         .registration-form {
           margin: 40px auto 0;
+          position: static;
         }
       }
     }
