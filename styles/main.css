@@ -30,53 +30,61 @@ body {
   body a {
     text-decoration: none;
     color: #3d4e61; }
+    body a:hover {
+      color: #000; }
   body li {
     list-style: none;
     font-weight: bold; }
   body header {
-    padding: 15px 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    body header .header-logo {
-      background: url(../images/logo.svg) no-repeat;
-      width: 30px;
-      height: 30px; }
-      body header .header-logo a {
-        padding: 15px; }
-    body header .header-nav {
+    padding: 15px 25px; }
+    body header .header-wrapper {
+      max-width: 1950px;
+      margin: 0 auto;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      body header .header-nav .header-ul {
+              justify-content: space-between; }
+      body header .header-wrapper .header-logo {
+        background: url(../images/logo.svg) no-repeat;
+        width: 30px;
+        height: 30px; }
+        body header .header-wrapper .header-logo a {
+          padding: 15px; }
+      body header .header-wrapper .header-right {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        margin: 0;
-        margin-right: 30px; }
-        body header .header-nav .header-ul li:not(:last-child) {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        body header .header-wrapper .header-right .header-nav {
           margin-right: 30px; }
-      body header .header-nav .header-profile {
-        background: url(../images/profile-photo.svg) no-repeat;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%; }
-        body header .header-nav .header-profile a {
-          padding: 15px; }
+          body header .header-wrapper .header-right .header-nav .header-ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            margin: 0; }
+            body header .header-wrapper .header-right .header-nav .header-ul li:not(:last-child) {
+              margin-right: 30px; }
+        body header .header-wrapper .header-right .header-profile {
+          background: url(../images/profile-photo.svg) no-repeat;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%; }
+          body header .header-wrapper .header-right .header-profile a {
+            padding: 15px; }
   body main .main-photo {
-    max-height: 464px; }
+    max-height: 464px;
+    text-align: center;
+    overflow: hidden; }
     body main .main-photo img {
       width: 100%; }
   body main .main-wrapper {
@@ -124,21 +132,26 @@ body {
         color: #3d4e61;
         outline: none;
         cursor: pointer; }
+        body main .main-wrapper .about-apartment .main-info .amenities .show-amenities:hover {
+          color: #000; }
       body main .main-wrapper .about-apartment .reviews {
         margin: 65px 0; }
         body main .main-wrapper .about-apartment .reviews .review {
           margin-top: 34px; }
           body main .main-wrapper .about-apartment .reviews .review .review-from {
-            margin-bottom: 14px; }
+            margin-bottom: 14px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex; }
             body main .main-wrapper .about-apartment .reviews .review .review-from .review-profile {
               background: #c4c4c4;
               width: 50px;
               height: 50px;
               border-radius: 50%;
-              margin-right: 20px;
-              float: left; }
+              margin-right: 20px; }
               body main .main-wrapper .about-apartment .reviews .review .review-from .review-profile .review-profile-link {
-                padding: 25px; }
+                padding: 25px;
+                font-size: 0; }
             body main .main-wrapper .about-apartment .reviews .review .review-from .review-author {
               font-size: 20px;
               margin-bottom: 4px; }
@@ -155,6 +168,9 @@ body {
         color: #118488;
         display: inline-block;
         margin-top: 20px; }
+        body main .main-wrapper .about-apartment .hosted-info .contact-host:hover {
+          color: #fff;
+          background: #118488; }
     body main .main-wrapper .registration-form {
       width: 330px;
       height: 320px;
@@ -162,7 +178,10 @@ body {
               box-sizing: border-box;
       border: 1px solid #e1e7ed;
       border-radius: 3px;
-      padding: 30px 30px 0; }
+      padding: 30px 30px 0;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 20px; }
       body main .main-wrapper .registration-form form {
         margin-top: 40px; }
         body main .main-wrapper .registration-form form input {
@@ -181,14 +200,18 @@ body {
           margin-top: 8px;
           background: #fd5c63;
           border-radius: 4px;
-          color: #fff; }
+          color: #fff;
+          cursor: pointer; }
+          body main .main-wrapper .registration-form form input[type="submit"]:hover {
+            font-weight: bold; }
     @media (max-width: 784px) {
       body main .main-wrapper {
         display: block; }
         body main .main-wrapper .about-apartment {
           margin: 0 auto; }
         body main .main-wrapper .registration-form {
-          margin: 40px auto 0; } }
+          margin: 40px auto 0;
+          position: static; } }
   body footer {
     padding: 45px 25px;
     -webkit-box-shadow: 0 -1px 0 #e1e7ed;
